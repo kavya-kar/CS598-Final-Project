@@ -1,6 +1,6 @@
 import itertools
 import re
-from src.preprocess.constants import *
+from preprocess.constants import *
 
 # Globally used regexes
 re_whitespace = re.compile(r'\s+', re.MULTILINE)

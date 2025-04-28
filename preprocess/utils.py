@@ -11,7 +11,7 @@ from scipy.sparse import lil_matrix
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import binarize
 from tqdm import tqdm
-from src.preprocess.regular_expressions import *
+from preprocess.regular_expressions import *
     
 
 def get_pairwise_text_similarity(texts, batch_size=1000, threshold=0):

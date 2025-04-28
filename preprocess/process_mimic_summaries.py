@@ -12,9 +12,9 @@ from tqdm import tqdm
 import swifter
 import string
 
-from src.preprocess.constants import *
-from src.preprocess.regular_expressions import *
-from src.preprocess.utils import *
+from preprocess.constants import *
+from preprocess.regular_expressions import *
+from preprocess.utils import *
 
 
 def parse_args():
@@ -151,6 +151,7 @@ def print_current_statistics(df):
 
 def main():
     args = parse_args()
+    batch_size = 1000
     try:
         mimic_df = pd.read_pickle(args.input_file)
     except pickle.UnpicklingError:
