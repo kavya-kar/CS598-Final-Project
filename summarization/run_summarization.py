@@ -49,9 +49,9 @@ from transformers import (
 from transformers.file_utils import is_offline_mode
 from transformers.trainer_utils import get_last_checkpoint, is_main_process
 from transformers.utils import check_min_version
-import wandb
+# import wandb
 
-from fine_tune_llama import compute_custom_metrics, print_metrics_as_latex
+# from fine_tune_llama import compute_custom_metrics, print_metrics_as_latex
 
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
@@ -272,9 +272,9 @@ def main():
         model_args, data_args, training_args = parser.parse_args_into_dataclasses()
 
     # Enable wandb logging
-    short_model_name = model_args.model_name_or_path.split('/')[-1]
-    wandb.init(project=f"mimic-iv-note-di-bhc_{short_model_name}_parameter_tuning_4000_600_chars", tags=[], notes="")
-    training_args.report_to = ['wandb']
+    # short_model_name = model_args.model_name_or_path.split('/')[-1]
+    # wandb.init(project=f"mimic-iv-note-di-bhc_{short_model_name}_parameter_tuning_4000_600_chars", tags=[], notes="")
+    training_args.report_to = []
 
     # Previously used to store configs
     # import pickle
@@ -358,7 +358,7 @@ def main():
         if data_args.test_file is not None:
             data_files["test"] = data_args.test_file
             extension = data_args.test_file.split(".")[-1]
-        datasets = load_dataset(extension, data_files=data_files)
+        datasets = load_dataset(extension, data_files=data_files, keep_in_memory=True)
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
     # https://huggingface.co/docs/datasets/loading_datasets.html.
 
@@ -651,16 +651,16 @@ def main():
                 test_preds = [pred.strip() for pred in test_preds]
                 
                 # Log test performance to wandb
-                metrics_test = compute_custom_metrics(orig_test_dataset[text_column], orig_test_dataset[summary_column], test_preds, 'cuda')
+                # metrics_test = compute_custom_metrics(orig_test_dataset[text_column], orig_test_dataset[summary_column], test_preds, 'cuda')
                 # Print test examples text and summary fields
-                print("Test examples:")
-                for i in range(min(len(orig_test_dataset), 10)):
-                    print(f"\n\n\nExample {i}:\n\n{orig_test_dataset[text_column][i]}\n\n{orig_test_dataset[summary_column][i]}\n\n{test_preds[i]}")
-                print("Test metrics:")
-                print(metrics_test)
-                print_metrics_as_latex(metrics_test)
-                wandb.log(metrics_test)
-                wandb.finish()
+                # print("Test examples:")
+                # for i in range(min(len(orig_test_dataset), 10)):
+                #     print(f"\n\n\nExample {i}:\n\n{orig_test_dataset[text_column][i]}\n\n{orig_test_dataset[summary_column][i]}\n\n{test_preds[i]}")
+                # print("Test metrics:")
+                # print(metrics_test)
+                # print_metrics_as_latex(metrics_test)
+                # wandb.log(metrics_test)
+                # wandb.finish()
 
                 output_test_preds_file = os.path.join(training_args.output_dir, "test_generations.txt")
                 # Write test_preds into pickle file
