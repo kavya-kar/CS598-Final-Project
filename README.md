@@ -11,11 +11,11 @@ This repository contains the code to reproduce the results of the paper A Data-C
 
 ## Setting Correct Paths
 
-We assume the root path to be /root in this README and for the code. Hence, we assume the repository is cloned to /root/CS598-Final-Project. Please adapt the paths according to your local setup.
+We assume the root path to be `/root` in this README and for the code. Hence, we assume the repository is cloned to `/root/CS598-Final-Project`. Please adapt the paths according to your local setup.
 
 ## Preparing the Environment
 
-We used conda to create the necessary virtual environments. For the ps_llms environment, we used python 3.9.18:
+We used `conda` to create the necessary virtual environments. For the `ps_llms` environment, we used python 3.9.18:
 
 ```
 conda create -n ps_llms python==3.9.18
