@@ -7,6 +7,7 @@ pd.options.mode.chained_assignment = None
 import re
 import pickle
 import nltk
+nltk.download('punkt')
 from collections import Counter
 from tqdm import tqdm
 import swifter
