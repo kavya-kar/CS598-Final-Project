@@ -1,4 +1,3 @@
-summarization_results*
 config.yaml 
 
 # Byte-compiled / optimized / DLL files
@@ -144,7 +143,6 @@ revised_examples/revised_examples_hallucination_free.jsonl
 revised_examples/revised_examples_orig.jsonl
 revised_examples/revised_examples.txt
 
-summarization_data/
 summarization_data.zip
 
 hallucination_detection_data.zip
@@ -155,8 +153,6 @@ performance_results/
 
 data/
 
-gpt-4/hallucination_detection_data/
-gpt-4/summarization_data/
-gpt-4/summarization_data/README.md
+
 
 revised_examples/
