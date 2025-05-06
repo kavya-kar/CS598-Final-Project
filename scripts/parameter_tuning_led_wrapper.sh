@@ -9,11 +9,11 @@ model_name_dir="led-large-16384" # led-base-16384 led-large-16384
 run_dir="mimic-iv-note-di-bhc_led-large-16384_4000_600_chars_100_valid" # 4000_600_chars_100_valid long_data_100_valid
 
 # Cluster
-project="/home/s/s_hegs02/scratch/mimic-iv-note-di-bhc"
-code="/home/s/s_hegs02/patient_summaries_with_llms"
+# project="/home/s/s_hegs02/scratch/mimic-iv-note-di-bhc"
+# code="/home/s/s_hegs02/patient_summaries_with_llms"
 # Local
-# project="/home/s_hegs02/mimic-iv-note-di-bhc"
-# code="/home/s_hegs02/patient_summaries_with_llms"
+project="/home/s_hegs02/mimic-iv-note-di-bhc"
+code="/home/s_hegs02/patient_summaries_with_llms"
 data_path="${project}/dataset"
 output_path="${project}/models/${model_name_dir}/${run_dir}"
 
