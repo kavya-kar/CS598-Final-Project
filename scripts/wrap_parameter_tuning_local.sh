@@ -8,8 +8,8 @@ run_dir="mimic-iv-note-di-bhc_led-large-16384_8000_600_chars_100_valid"
 output_path="${project}/models/${model_name_dir}/${run_dir}"
 
 # Loop over parameter combinations
-for dropout in 0.075; do
-  for learning_rate in 3e-6; do
+for dropout in 0.05 0.075 0.1; do
+  for learning_rate in 1e-5 3e-6; do
     folder_name="dropout_${dropout}_learning_rate_${learning_rate}"
     experiment_path="${output_path}/${folder_name}"
 

@@ -18,7 +18,6 @@ python3 run_summarization.py --task_id 2 --prompt_id 3.1 --model_name gpt-4.1 --
 python3 run_summarization.py --task_id 2 --prompt_id 3 --model_name gpt-4.1 --n_shot 5 --verbose
 ```
 
-
 The following commands were used to generate the data, please adjust the paths to match your system:
 
 ```bash
