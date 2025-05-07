@@ -16,10 +16,9 @@ python3 run_summarization.py --task_id 1 --prompt_id 3.1 --model_name gpt-4.1 --
 python3 run_summarization.py --task_id 1 --prompt_id 3 --model_name gpt-4.1 --n_shot 2 --verbose
 python3 run_summarization.py --task_id 2 --prompt_id 3.1 --model_name gpt-4.1 --n_shot 0 --verbose
 python3 run_summarization.py --task_id 2 --prompt_id 3 --model_name gpt-4.1 --n_shot 5 --verbose
+```
 
-
-
-Following commands were used to generate the data:
+The following commands were used to generate the data, please adjust the paths to match your system:
 
 ```bash
 tail -n 10 ./data/train.json > /Users/kavyakarthi/Documents/MCS/CS598/Final_Project/Code/final_proj/gpt-4/summarization_data/prompt_train.json
@@ -29,4 +28,4 @@ tail -n 10 ./data/train.json > ~/Documents/MCS/CS598/Final_Project/Code/final_pr
 tail -n 100 ./data/test.json > ~/Documents/MCS/CS598/Final_Project/Code/final_proj/gpt-4/summarization_data/exp_1_test.json
 tail -n 10 ./data/train_8000_600_chars.json > ~/Documents/MCS/CS598/Final_Project/Code/final_proj/gpt-4/summarization_data/exp_2_in-context.json
 tail -n 100 ./data/test_8000_600_chars.json > ~/Documents/MCS/CS598/Final_Project/Code/final_proj/gpt-4/summarization_data/exp_2_test.json
-
+```

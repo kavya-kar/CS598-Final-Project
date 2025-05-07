@@ -25,6 +25,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 import nltk  # Here to have a nice missing dependency error message early on
+nltk.download('punkt')
 import numpy as np
 from datasets import load_dataset, load_metric
 # from peft import get_peft_config, get_peft_model, LoraConfig, TaskType, prepare_model_for_int8_training
