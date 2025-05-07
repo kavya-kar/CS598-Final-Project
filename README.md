@@ -5,7 +5,9 @@ This repository contains the code to reproduce the results of the paper A Data-C
 ## Overview
 
 * [gpt-4](https://github.com/kavya-kar/CS598-Final-Project/tree/main/gpt-4): All code related to the GPT-4 experiments.
+* [labeling](https://github.com/kavya-kar/CS598-Final-Project/tree/main/labeling): Scripts to analyse and work with labeling data.
 * [note](https://github.com/kavya-kar/CS598-Final-Project/tree/main/note): Initial dataset used before processing (modified from original 331793 entries to last 7500 entries for processing constraints).
+* [notebooks](https://github.com/kavya-kar/CS598-Final-Project/tree/main/notebooks): Jupyter notebooks for different experiments, helper tasks, and analyses.
 * [preprocess](https://github.com/kavya-kar/CS598-Final-Project/tree/main/preprocess): Preprocessing pipeline as presented in the paper.
 * [scripts](https://github.com/kavya-kar/CS598-Final-Project/tree/main/scripts): Scripts for parameter tuning of LED model.
 * [summarization](https://github.com/kavya-kar/CS598-Final-Project/tree/main/summarization): All code related to the summarization experiments with LED model.
