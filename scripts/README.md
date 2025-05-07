@@ -3,11 +3,13 @@
 They utilized an SLURM cluster for multiple training jobs on both an LED transformer and Llama 2 models with both 7 and 70 billion parameters. The LED transformer is a baseline for this study.
 
 Our code is contained within `train_local_led.sh` and `wrap_parameter_tuning_local.sh`
+
 We did not use a cluster and trained only the LED transformer locally.
 
 ## Adjusting Paths
 
 In both `train_local_led.sh` and `wrap_parameter_tuning_local.sh`, the `project` paths need to be updated locally.
+
 In `wrap_parameter_tuning_local.sh`, the `code` path also needs to be updated locally.
 
 ## After Data Processing
@@ -26,6 +28,7 @@ This will start parameter tuning of the LED transformer and will output ROUGE sc
 ## Adjusting Training Paradigms
 
 We were unable to run an exact simulation of the authors' experiments due to time and processing constraints.
+
 To match the authors' specifications, replace the corresponding sections in each of the files as such:
 
 `wrap_parameter_tuning_local.sh`:
